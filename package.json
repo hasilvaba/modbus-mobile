@@ -27,7 +27,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "modbus-pdu": "^1.13.0",
-    "serialport": "^7.1.4"
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^11.13.4",

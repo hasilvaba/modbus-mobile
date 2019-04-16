@@ -38,7 +38,11 @@ modbus.tcp.connect(502, "10.1.1.10", { debug: "automaton-2454" }, (err, connecti
 	if (err) throw err;
 	setInterval( function () {
 		connection.readHoldingRegisters({ address: 16466-1, quantity: 2, extra: { unitId: 255 } }, (err, res) => {
-			if (err) throw err;
+			//if (err) throw err;
+			if (err) {
+				console.log("error")
+				return;
+			}
 			//console.log('res.pdu.data '+ JSON.stringify(res.pdu)); // response
 			console.log('res.response '+ JSON.stringify(res.response)); // response
 			console.log('res.response.data '+ JSON.stringify(res.response.data)); // response
@@ -48,6 +52,8 @@ modbus.tcp.connect(502, "10.1.1.10", { debug: "automaton-2454" }, (err, connecti
 					console.log('objeto '+data)
 				})*/		
 			})
+		}, error => {
+			console.log("error")
 		})
     }, time_read)
 });

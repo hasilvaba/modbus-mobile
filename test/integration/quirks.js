@@ -80,7 +80,7 @@ describe("transport quirks", function () {
 			stream.transport.stream.push(res);
 		});
 	});
-
+/*
 	describe("serial", function () {
 		it("should invoke callback only once", function (done) {
 			this.timeout(5000);
@@ -146,7 +146,7 @@ describe("transport quirks", function () {
 			stream.transport.stream.push(res.slice(4));
 		});
 	});
-
+*/
 	describe("ascii", function () {
 		it("should invoke callback only once", function (done) {
 			this.timeout(5000);
